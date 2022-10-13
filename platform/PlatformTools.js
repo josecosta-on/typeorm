@@ -37,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var path = require("path");
 var fs = require("fs");
-var cli_highlight_1 = require("cli-highlight");
 var fs_1 = require("fs");
 exports.ReadStream = fs_1.ReadStream;
 var events_1 = require("events");
@@ -194,13 +193,13 @@ var PlatformTools = /** @class */ (function () {
             "built_in": chalk.magentaBright,
             "comment": chalk.gray,
         };
-        return cli_highlight_1.highlight(sql, { theme: theme, language: "sql" });
+        return sql;
     };
     /**
      * Highlights json string to be print in the console.
      */
     PlatformTools.highlightJson = function (json) {
-        return cli_highlight_1.highlight(json, { language: "json" });
+        return json
     };
     /**
      * Logging functions needed by AdvancedConsoleLogger

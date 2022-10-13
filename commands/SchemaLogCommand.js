@@ -99,7 +99,7 @@ var SchemaLogCommand = /** @class */ (function () {
                                 var sqlString = typeof sql === "string" ? sql : sql.up;
                                 sqlString = sqlString.trim();
                                 sqlString = sqlString.substr(-1) === ";" ? sqlString : sqlString + ";";
-                                console.log(cli_highlight_1.highlight(sqlString));
+                                console.log(sqlString);
                             });
                         }
                         return [4 /*yield*/, connection.close()];
